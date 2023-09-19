@@ -1,0 +1,38 @@
+Autor: Radek Duchoň, xducho07
+FLP projekt 1: simplify-bkg
+
+Program minimalizuje gramatiku odstraněním zbytečných neterminálů, terminálů a pravidel dle algoritmu 4.3 z opory TIN.
+
+Překlad - pomocí příkazu make
+spuštění:
+    ./simplify-bkg přepínač [SOUBOR]
+
+přepínač ovlivňuje chování programu následovně:
+	-i: na standardní výstup se vypíše BKG dle specifikovaného formátu - Načtená do vnitřní reprezentace
+	-1: na standardní výstup se vypíše BKG G' dle specifikovaného formátu - Po prvním kroku algoritmu 4.3 z opory TIN
+	-2: na standardní výstup se vypíše BKG G'' dle specifikovaného formátu - Po druhém kroku algoritmum 4.3 z opor TIN
+
+[SOUBOR] je volitelný parametr se jménem souboru, ze kterého se má načítat gramatika, při nezadání se gramatika zadává na standardní vstup.
+
+Format vstupu/ýystupu:
+- seznam všech neterminálů
+- seznam všech terminálů
+- počáteční neterminál
+- pravidlo 1
+...
+- pravidlo n
+
+
+Příklad vstupu/výstupu:
+S,A,B
+a,b,c,d
+S
+S->#
+S->AB
+A->aAb
+A->ab
+B->cBd
+B->cd
+
+Příklad spuštění programu:
+./simplify-bkg -2 txt

@@ -1,0 +1,86 @@
+Autor: Radek Duchoň, xducho07
+FLP projekt 2: Rubikova kostka
+
+
+Program hledá řešení rubikovy kostky pomocí metody BFS.
+
+
+Překlad - pomocí příkazu make
+spuštění:
+    ./flp20-log < vstup.txt
+
+
+Přiložené testovací soubory a přibližné časy vykonání:
+    tests/1-1   - 0.01s
+    tests/2-1   - 0.02s
+    tests/3-1   - 0.05s
+    tests/4-1   - 2.35s
+    tests/4-2   - 0.59s
+    tests/4-3   - 1.24s
+    tests/4-4   - 1.29s
+    tests/4-5   - 1.66s
+    tests/4-6   - 0.22s
+    tests/4-7   - 0.19s
+    tests/4-8   - 0.18s
+    tests/4-9   - 0.5s
+    tests/4-10  - 0.26s
+    tests/4-11  - 1.25s
+    tests/4-12  - 0.27s
+    tests/4-13  - 0.54s
+    tests/5-1   - 10s
+    tests/5-2   - 16s
+    tests/5-3   - 1m36s
+
+
+Příklad vstupu:
+323
+555
+555
+222 336 434 511
+111 226 434 544
+222 336 434 511
+666
+666
+141
+
+
+Příklad výstupu:
+323
+555
+555
+222 336 434 511
+111 226 434 544
+222 336 434 511
+666
+666
+141
+
+555
+555
+555
+222 333 444 111
+111 222 333 444
+222 333 444 111
+666
+666
+666
+
+555
+555
+555
+111 222 333 444
+111 222 333 444
+222 333 444 111
+666
+666
+666
+
+555
+555
+555
+111 222 333 444
+111 222 333 444
+111 222 333 444
+666
+666
+666
